@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30626.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{9091A5F4-376B-4C17-9298-B5020E688014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeWebView", "NativeWebView\NativeWebView.csproj", "{29E14CB2-CD3F-4896-B212-9FF0E5CCFD5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeWebViewUnitTest", "NativeWebViewUnitTest\NativeWebViewUnitTest.csproj", "{F315FB13-BB28-463A-BACC-CA77485E1016}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://steamfistinnovations.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = API\\API.csproj
+		SccProjectName1 = API
+		SccLocalPath1 = API
+		SccProjectUniqueName2 = Core\\Core.csproj
+		SccProjectName2 = Core
+		SccLocalPath2 = Core
+		SccProjectUniqueName3 = NativeWebView\\NativeWebView.csproj
+		SccProjectName3 = NativeWebView
+		SccLocalPath3 = NativeWebView
+		SccProjectUniqueName4 = NativeWebViewUnitTest\\NativeWebViewUnitTest.csproj
+		SccProjectName4 = NativeWebViewUnitTest
+		SccLocalPath4 = NativeWebViewUnitTest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9091A5F4-376B-4C17-9298-B5020E688014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9091A5F4-376B-4C17-9298-B5020E688014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9091A5F4-376B-4C17-9298-B5020E688014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9091A5F4-376B-4C17-9298-B5020E688014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E14CB2-CD3F-4896-B212-9FF0E5CCFD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E14CB2-CD3F-4896-B212-9FF0E5CCFD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E14CB2-CD3F-4896-B212-9FF0E5CCFD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E14CB2-CD3F-4896-B212-9FF0E5CCFD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F315FB13-BB28-463A-BACC-CA77485E1016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F315FB13-BB28-463A-BACC-CA77485E1016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F315FB13-BB28-463A-BACC-CA77485E1016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F315FB13-BB28-463A-BACC-CA77485E1016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
