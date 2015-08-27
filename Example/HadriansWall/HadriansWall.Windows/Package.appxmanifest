@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="1ceda23c-ccbd-4935-b040-c7d139087b6b" Publisher="CN=Christopher" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>HadriansWall</DisplayName>
+    <PublisherDisplayName>Steamfist Innovation</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.jpg</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HadriansWall.Windows.App">
+      <m2:VisualElements DisplayName="HadriansWall.Windows" Square150x150Logo="Assets\Square150x150Logo.jpg" Square30x30Logo="Assets\Square30x30Logo.jpg" Description="HadriansWall.Windows" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
+        <m2:DefaultTile ShortName="Hadrian's Wall" Square310x310Logo="Assets\Square310x310Logo.jpg" Wide310x150Logo="Assets\Wide310x150Logo.jpg" DefaultSize="square150x150Logo" Square70x70Logo="Assets\Square70x70Logo.jpg">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.jpg" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+        <m2:ApplicationView MinWidth="width500" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+</Package>
