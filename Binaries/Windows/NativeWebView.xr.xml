@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
+      <RootEvent Name="ScriptNotify" />
+    </RootType>
+    <RootType FullName="NativeWebView.WebUserControl" />
+  </Roots.RootTypes>
+</Roots>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="1ceda23c-ccbd-4935-b040-c7d139087b6b" Publisher="CN=Christopher" Version="1.0.0.0" />
+  <Identity Name="42219steamfistinnovations.HadriansWall" Publisher="CN=25D30E88-145B-49A5-B5FE-096169CFB80C" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>HadriansWall</DisplayName>
-    <PublisherDisplayName>Steamfist Innovation</PublisherDisplayName>
+    <DisplayName>Hadrian's Wall</DisplayName>
+    <PublisherDisplayName>steamfistinnovations</PublisherDisplayName>
     <Logo>Assets\StoreLogo.jpg</Logo>
   </Properties>
   <Prerequisites>

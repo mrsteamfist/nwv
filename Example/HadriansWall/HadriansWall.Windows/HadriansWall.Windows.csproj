@@ -16,9 +16,10 @@
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>HadriansWall.Windows_StoreKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
     <PackageCertificateThumbprint>6CD5012756D9E5CAFD5FE9605DC31B99960C7597</PackageCertificateThumbprint>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -158,13 +159,17 @@
     <Content Include="..\HadriansWall.Shared\Assets\wall.png">
       <Link>Assets\wall.png</Link>
     </Content>
+    <Content Include="Assets\SplashScreen.scale-100.jpg" />
     <Content Include="Assets\SplashScreen.scale-180.jpg" />
     <Content Include="Assets\Square150x150Logo.scale-100.jpg" />
     <Content Include="Assets\Square150x150Logo.scale-140.jpg" />
+    <Content Include="Assets\Square30x30Logo.scale-100.jpg" />
     <Content Include="Assets\Square30x30Logo.targetsize-256.jpg" />
     <Content Include="Assets\Square310x310Logo.scale-100.jpg" />
     <Content Include="Assets\Square310x310Logo.scale-180.jpg" />
     <Content Include="Assets\Square70x70Logo.scale-180.jpg" />
+    <Content Include="Assets\Square70x70Logo.scale-80.jpg" />
+    <Content Include="Assets\StoreLogo.scale-100.jpg" />
     <Content Include="Assets\StoreLogo.scale-180.jpg" />
     <Content Include="Assets\Wide310x150Logo.scale-100.jpg" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />

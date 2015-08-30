@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="f91fed2d-5fa0-42f3-bbbc-520e72c7fc34" Publisher="CN=Christopher" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="f91fed2d-5fa0-42f3-bbbc-520e72c7fc34" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="42219steamfistinnovations.HadriansWall" Publisher="CN=25D30E88-145B-49A5-B5FE-096169CFB80C" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="75b159de-5961-4e58-83ea-a03bbfd04b9e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Hadrians Wall</DisplayName>
-    <PublisherDisplayName>Steamfist Innovations</PublisherDisplayName>
+    <DisplayName>Hadrian's Wall</DisplayName>
+    <PublisherDisplayName>steamfistinnovations</PublisherDisplayName>
     <Logo>Assets\StoreLogo.jpg</Logo>
   </Properties>
   <Prerequisites>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HadriansWall.WindowsPhone.App">
-      <m3:VisualElements DisplayName="Hadrians Wall" Square150x150Logo="Assets\Square150x150Logo.jpg" Square44x44Logo="Assets\Square44x44Logo.jpg" Description="HadriansWall.WindowsPhone" ForegroundText="light" BackgroundColor="black">
+      <m3:VisualElements DisplayName="Hadrian's Wall" Square150x150Logo="Assets\Square150x150Logo.jpg" Square44x44Logo="Assets\Square44x44Logo.jpg" Description="HadriansWall.WindowsPhone" ForegroundText="light" BackgroundColor="black">
         <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.jpg" />
         <m3:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.jpg" Square71x71Logo="Assets\Square71x71Logo.jpg">
         </m3:DefaultTile>
