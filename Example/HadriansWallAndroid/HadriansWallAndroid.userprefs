@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="HadriansWallAndroid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_21" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\NativeWebView\Android\NativeWebView\Resources\WebUserControl.cs">
+    <Files>
+      <File FileName="..\..\NativeWebView\Core\ContentView.cs" Line="105" Column="1" />
+      <File FileName="..\..\NativeWebView\Android\NativeWebView\Resources\WebUserControl.cs" Line="92" Column="7" />
+      <File FileName="..\..\NativeWebView\Core\HTML\HtmlDocument.cs" Line="190" Column="1" />
+      <File FileName="MainActivity.cs" Line="26" Column="1" />
+      <File FileName="Rules.cs" Line="62" Column="1" />
+      <File FileName="d:\Projects\NativeWebView\NativeWebView\Core\HTML\DOM\ImageElement.cs" Line="41" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="d:\Projects\NativeWebView\Example\HadriansWallAndroid\Rules.cs" line="410" column="1" />
+      <Breakpoint file="d:\Projects\NativeWebView\Example\HadriansWallAndroid\Rules.cs" line="283" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\Example\HadriansWallAndroid\Rules.cs" line="62" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\NativeWebView\Core\ContentView.cs" line="105" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\NativeWebView\Core\ContentView.cs" line="94" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\Example\HadriansWallAndroid\Rules.cs" line="47" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\Example\HadriansWallAndroid\Rules.cs" line="55" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\NativeWebView\Android\NativeWebView\Resources\WebUserControl.cs" line="91" column="1" />
+      <Breakpoint file="D:\Projects\NativeWebView\NativeWebView\Android\NativeWebView\Resources\WebUserControl.cs" line="129" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.HadriansWallAndroid AndroidDesignerPreferredDevice="Nexus 4" AndroidDeviceId-Debug="emulator-5554" />
+</Properties>

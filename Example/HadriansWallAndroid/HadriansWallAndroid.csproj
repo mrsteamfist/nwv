@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1D8F64D6-F5F1-441B-8717-4BFACFA5347F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HadriansWallAndroid</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>HadriansWallAndroid</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Views\RazorView.cs">
+      <DependentUpon>RazorView.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Rules.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Views\RazorView.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\style.css" />
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\bluemeeples.png">
+      <Link>Assets\bluemeeples.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\board.jpg">
+      <Link>Assets\board.jpg</Link>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>Binaries</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\button_left.png">
+      <Link>Assets\button_left.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\button_right.png">
+      <Link>Assets\button_right.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\gameover-lose.png">
+      <Link>Assets\gameover-lose.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\gameover-win.png">
+      <Link>Assets\gameover-win.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\howtoplay.png">
+      <Link>Assets\howtoplay.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\load.png">
+      <Link>Assets\load.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\redmeeples.png">
+      <Link>Assets\redmeeples.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\story.jpg">
+      <Link>Assets\story.jpg</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\HadriansWall\HadriansWall.Shared\Assets\wall.png">
+      <Link>Assets\wall.png</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\NativeWebView\API\API.csproj">
+      <Project>{9091A5F4-376B-4C17-9298-B5020E688014}</Project>
+      <Name>API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NativeWebView\Core\Core.csproj">
+      <Project>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NativeWebView\Android\NativeWebView\NativeWebView.csproj">
+      <Project>{790EABFB-ED4D-42CC-98C2-E320574B83D7}</Project>
+      <Name>NativeWebView</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
