@@ -20,6 +20,7 @@ namespace NativeWebView
 			: base(handle, transfer)
 		{
 		}
+
 		[Export]
 		[JavascriptInterface]
 		// to become consistent with Java/JS interop convention, the argument cannot be System.String.

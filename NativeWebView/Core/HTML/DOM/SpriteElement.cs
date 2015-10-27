@@ -43,7 +43,7 @@ namespace NativeWebView
         /// <param name="frames"></param>
         /// <param name="totalWidth"></param>
         /// <param name="totalHeight"></param>
-        public SpriteElement(string format, byte[] imageBytes, int frames, int totalWidth, int totalHeight) : base(format, imageBytes)
+        public SpriteElement(string img, int frames, int totalWidth, int totalHeight) : base(img)
         {
             CurrentFrame = 0;
             Width = totalWidth;

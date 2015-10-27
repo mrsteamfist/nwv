@@ -44,7 +44,7 @@ namespace NativeWebView.HTML
             Body = new HtmlBody();
             Head = GenerateHead();
 
-            Body.AddElement(new JavaScriptOperation(@"window.onload = function () { SendNotification('Loaded'); }"));
+			Body.AddElement(new JavaScriptOperation("window.onload = function () { SendNotification('Loaded'); }"));
         }
         /// <summary>
         /// Generate all of the head messages.
@@ -61,6 +61,7 @@ namespace NativeWebView.HTML
         private static HtmlHead GenerateHead()
         {
             var reply = new HtmlHead();
+			/*
 #if DEBUG
             reply.AddElement(new JavaScript.JavaScriptOperation(@"window.onerror = function (message, uri, lineNumber, columnNumber) {
     if (columnNumber != null)
@@ -72,6 +73,7 @@ namespace NativeWebView.HTML
 };"));
             reply.AddElement(new NativeWebView.ContentElement("<script src='http://192.168.1.182:8080/target/target-script-min.js#anonymous'></script>"));
 #endif
+*/
             reply.AddElement(GenHandleEventFunction());
             reply.AddElement(GenerateRecieverFunction());
             reply.AddElement(GenerateSendNotificationFunction());
@@ -160,7 +162,7 @@ namespace NativeWebView.HTML
         {
             var reply = new JavaScriptFunction("SendNotification");
             reply.Parameters.Add("msg");
-            reply.Lines.Add(new JavaScriptOperation(@"if (typeof window.external !== 'undefined' && typeof window.external.notify !== 'undefined')
+			reply.Lines.Add(new JavaScriptOperation(@"if (typeof window.external !== 'undefined' && typeof window.external.notify !== 'undefined')
     window.external.notify(msg);
 else if (typeof External !== 'undefined' && typeof External.notify !== 'undefined')
     External.notify(msg);
@@ -186,7 +188,7 @@ else
                 builder.AppendLine("</head><body>");
                 builder.AppendLine(Body.Html);
                 builder.AppendLine("</body></html>");
-                return builder.ToString();
+				return builder.ToString ();
             }
         }
 

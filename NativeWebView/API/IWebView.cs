@@ -36,6 +36,7 @@ namespace NativeWebView.API
         /// Event which needs to be executed on the UI Dispatched
         /// </summary>
         event TypedEventHandler<IWebView, Action> UiTask;
+        event EventHandler ControlLoaded;
         /// <summary>
         /// Wrapper to fire an action on the UI thread
         /// </summary>
@@ -61,6 +62,6 @@ namespace NativeWebView.API
         /// </summary>
         /// <param name="path">Local path with the image</param>
         /// <returns></returns>
-        System.Threading.Tasks.Task<byte[]> GetImageData(String path);
+		System.Threading.Tasks.Task<String> GetImageData(String path, string format);
     }
 }

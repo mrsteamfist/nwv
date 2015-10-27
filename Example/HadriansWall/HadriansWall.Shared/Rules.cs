@@ -46,11 +46,11 @@ namespace HadriansWall
         public Rules()
         {
             WebControl = new WebUserControl();
-            WebControl.Loaded += _webControl_Loaded;
+            WebControl.ControlLoaded += _webControl_Loaded;
             _contentView = new ContentView(WebControl, new NativeWebView.HTML.CSS.CSSDocument(CSS));
         }
         #region Call Backs
-        async void _webControl_Loaded(object sender, RoutedEventArgs e)
+        async void _webControl_Loaded(object sender, EventArgs e)
         {
             var width = Math.Max(Window.Current.Bounds.Width, Window.Current.Bounds.Height);
             var height = Math.Min(Window.Current.Bounds.Width, Window.Current.Bounds.Height);
@@ -197,8 +197,8 @@ namespace HadriansWall
                 var heightDiff = height / 1080f;
                 var widthDiff = width / 1920f;
                 var replies = new List<ImageElement>();
-                var image = await WebControl.GetImageData("/Assets/board.jpg");
-                var background = new ImageElement(".jpg", image);
+                var image = await WebControl.GetImageData("/Assets/board.jpg", "jpg");
+                var background = new ImageElement(image);
                 background.Width = (int)width;
                 background.Height = (int)height;
                 background.Style.Left = 0;
@@ -206,8 +206,8 @@ namespace HadriansWall
                 background.Style.ZIndex = -1;
                 background.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
                 replies.Add(background);
-                image = await WebControl.GetImageData("/Assets/howtoplay.png");
-                HelpScreen = new ImageElement(".png", image);
+                image = await WebControl.GetImageData("/Assets/howtoplay.png", "png");
+                HelpScreen = new ImageElement(image);
                 HelpScreen.Width = (int)width;
                 HelpScreen.Height = (int)height;
                 HelpScreen.Style.Left = 0;
@@ -216,7 +216,7 @@ namespace HadriansWall
                 HelpScreen.Style.Display = Display.none;
                 HelpScreen.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
                 replies.Add(HelpScreen);
-                image = await WebControl.GetImageData("/Assets/gameover-win.png");
+                image = await WebControl.GetImageData("/Assets/gameover-win.png", "png");
                 WinScreen = new ImageElement(".png", image);
                 WinScreen.Width = (int)width;
                 WinScreen.Height = (int)height;
@@ -226,7 +226,7 @@ namespace HadriansWall
                 WinScreen.Style.Display = Display.none;
                 WinScreen.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
                 replies.Add(WinScreen);
-                image = await WebControl.GetImageData("/Assets/gameover-lose.png");
+                image = await WebControl.GetImageData("/Assets/gameover-lose.png", "png");
                 LoseScreen = new ImageElement(".png", image);
                 LoseScreen.Width = (int)width;
                 LoseScreen.Height = (int)height;
@@ -237,7 +237,7 @@ namespace HadriansWall
                 LoseScreen.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
                 replies.Add(LoseScreen);
 
-                image = await WebControl.GetImageData("/Assets/wall.png");
+                image = await WebControl.GetImageData("/Assets/wall.png", "png");
                 var nibble = 60 * widthDiff;
                 wall = GenerateItem(image, (int)(width / 2), (int)(170 * heightDiff), (int)(width - (nibble * 2)), (int)(990 * heightDiff), 6);//new SpriteElement(".png", image, 6, 1800, 690);
                 replies.Add(wall);
@@ -248,10 +248,10 @@ namespace HadriansWall
                 int villagerWidth = (int)(150 * widthDiff);
                 int villagerHeight = (int)(3960 * heightDiff);
 
-                var leftbutton = await WebControl.GetImageData("/Assets/button_left.png");
-                var rightbutton = await WebControl.GetImageData("/Assets/button_right.png");
-                var blue = await WebControl.GetImageData("/Assets/bluemeeples.png");
-                var red = await WebControl.GetImageData("/Assets/redmeeples.png");
+                var leftbutton = await WebControl.GetImageData("/Assets/button_left.png", "png");
+                var rightbutton = await WebControl.GetImageData("/Assets/button_right.png", "png");
+                var blue = await WebControl.GetImageData("/Assets/bluemeeples.png", "png");
+                var red = await WebControl.GetImageData("/Assets/redmeeples.png", "png");
                 var left = background.Width / 5;
                 var top = background.Height / 2;
                 var buttonTop = top + villagerHeight / 40;
@@ -451,9 +451,9 @@ namespace HadriansWall
                 }
             }
         }
-        ImageElement GenerateItem(byte[] bytes, int center, int top, int width, int height)
+        ImageElement GenerateItem(string src, int center, int top, int width, int height)
         {
-            var image = new ImageElement(".png", bytes);
+            var image = new ImageElement(src);
             image.Width = width;
             image.Height = height;
             image.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
@@ -462,9 +462,9 @@ namespace HadriansWall
             image.Style.Top = top;
             return image;
         }
-        SpriteElement GenerateItem(byte[] bytes, int center, int top, int width, int height, int frames)
+        SpriteElement GenerateItem(string src, int center, int top, int width, int height, int frames)
         {
-            var image = new SpriteElement(".png", bytes, frames, width, height);
+            var image = new SpriteElement(src, frames, width, height);
             image.Style.Position = NativeWebView.HTML.CSS.Attributes.ElementPositions.position_absolute;
             image.Style.Display = Display.none;
             image.Style.Left = center - (width / 2);

@@ -87,12 +87,6 @@
   <ItemGroup>
     <Content Include="HTML\JavaScript\test.js" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\API\API.csproj">
-      <Project>{9091A5F4-376B-4C17-9298-B5020E688014}</Project>
-      <Name>API</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -101,4 +95,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj">
+      <Project>{9091A5F4-376B-4C17-9298-B5020E688014}</Project>
+      <Name>API</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

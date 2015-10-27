@@ -57,10 +57,11 @@ namespace NativeWebView
             private set { _htmlDocument.HasLoaded = value; }
         }
         /// <summary>
-        /// Defaul constructor.  Ties an IWebView to the given ContentView.
+        /// Default constructor.  Ties an IWebView to the given ContentView.
+        /// A webview can only be registered to a single Content view.
         /// </summary>
         /// <param name="webview">Webciew to send message</param>
-        /// <param name="document"></param>
+        /// <param name="document">Optional css document to load for the program's default css</param>
         public ContentView(IWebView webview, CSSDocument document = null)
         {
             if (_WEBVIEW_OWNERS.ContainsValue(webview))
@@ -70,11 +71,21 @@ namespace NativeWebView
             _externalStyleSheet = document;
             _htmlDocument = new HtmlDocument();
         }
+        /// <summary>
+        /// Contrustor taking a list of elements to be displayed
+        /// </summary>
+        /// <param name="webview">Webciew to send message</param>
+        /// <param name="document">Optional css document to load for the program's default css</param>
+        /// <param name="elements">Initial elements to add to the HTML body.</param>
         public ContentView(IWebView webview, CSSDocument document = null, params DisplayElement[] elements):this(webview, document)
         {
             _htmlDocument = new HtmlDocument();
             InitializeDisplay(elements);
         }
+        /// <summary>
+        /// Add addition elements to the HTML root.  This is the last time to add an element to the document root.
+        /// </summary>
+        /// <param name="elements">Elements to add.</param>
         public void InitializeDisplay(params DisplayElement[] elements)
         {
             if (!HasLoaded)
@@ -94,7 +105,11 @@ namespace NativeWebView
                 _WEBVIEW_OWNERS[this].SetPage(_htmlDocument.HtmlText);
             }
         }
-
+        /// <summary>
+        /// Listens to a type event from the given target element.
+        /// </summary>
+        /// <param name="target">Element to listen to</param>
+        /// <param name="type">Type of event fired</param>
         public void RegisterEvent(DisplayElement target, HtmlEventType type)
         {
             if (HasLoaded)
@@ -102,18 +117,37 @@ namespace NativeWebView
             else
                 throw new Exception("Cannot load register events untill system has loaded");
         }
-
+        /// <summary>
+        /// Notifies the webview that an event 
+        /// </summary>
+        /// <param name="actionToPerform">The action to send to the HTML page</param>
+        /// <param name="id">Which element to send it to</param>
+        /// <param name="type">The type of action</param>
         internal void PerformAction(RegistrationAction actionToPerform, String id, HtmlEventType type)
         {
             var msg = new JSON.JsonHelper((int)actionToPerform, id, type.ToString());
             _WEBVIEW_OWNERS[this].SendJavaScript(msg.ToString());
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="actionToPerform"></param>
+        /// <param name="id"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="propertyValue"></param>
         internal void PerformAction(RegistrationAction actionToPerform, String id, String propertyName, String propertyValue)
         {
             var msg = new JSON.JsonHelper((int)actionToPerform, id, propertyName, propertyValue);
             _WEBVIEW_OWNERS[this].SendJavaScript(msg.ToString());
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="actionToPerform"></param>
+        /// <param name="sourceId"></param>
+        /// <param name="objectHtml"></param>
+        /// <param name="objectId"></param>
+        /// <param name="css"></param>
         internal void PerformAction(RegistrationAction actionToPerform, String sourceId, String objectHtml, String objectId, String css)
         {
             var msg = new JSON.JsonHelper((int)actionToPerform, sourceId, objectHtml, objectId, css);

@@ -16,12 +16,6 @@ namespace NativeWebView
         private int _height;
         private int _width;
         #region Ctor
-        public ImageElement(String id = null)
-            : base(id, "img")
-        {
-            Style = new ImageSelector(Id);
-            Style.PropertyChanged += Style_PropertyChanged;
-        }
         public ImageSelector ImageCSS
         {
             get
@@ -34,20 +28,12 @@ namespace NativeWebView
         /// Also handles if there is not a predefined image
         /// </summary>
         /// <param name="externalPath">Path outside of the application where the image is</param>
-        public ImageElement(string externalPath, string id = null)
-            : this(id)
+        public ImageElement(string img, string id = null)
+            : base(id, "img")
         {
-            Src = externalPath;
-        }
-        /// <summary>
-        /// Ctor which loads the image via byte array
-        /// </summary>
-        /// <param name="format">Format of the image</param>
-        /// <param name="imageBytes">Array with the bytes of the image</param>
-        public ImageElement(string format, byte[] imageBytes)
-            : this(null)
-        {
-            SetImage(format, imageBytes);
+			Src = img;
+			Style = new ImageSelector(Id);
+			Style.PropertyChanged += Style_PropertyChanged;
         }
         #endregion
         /// <summary>
@@ -94,6 +80,7 @@ namespace NativeWebView
         /// </summary>
         /// <param name="format">Format of the image</param>
         /// <param name="imageBytes">Array with the bytes of the image</param>
+		/*
         public void SetImage(string format, byte[] imageBytes)
         {
             var stringBuilder = new StringBuilder("data:image/");
@@ -101,5 +88,6 @@ namespace NativeWebView
             stringBuilder.Append(Convert.ToBase64String(imageBytes));
             Src = stringBuilder.ToString();
         }
+        */
     }
 }

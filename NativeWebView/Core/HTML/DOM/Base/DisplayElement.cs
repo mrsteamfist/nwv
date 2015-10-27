@@ -73,7 +73,7 @@ namespace NativeWebView.HTML.DOM.Base
         {
             get
             {
-                var reply = new StringBuilder(String.Format("<{0} id={1}", _tag, Id));
+                var reply = new StringBuilder(String.Format("<{0} id='{1}'", _tag, Id));
                 if(!String.IsNullOrEmpty(Class))
                     reply.AppendFormat(" class='{0}'", Class);
                 foreach(var attribute in _attributes)
